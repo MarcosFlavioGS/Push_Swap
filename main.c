@@ -24,6 +24,21 @@ void	print_linkdlst(t_node *head)
 	}
 }
 
+int	lst_len(t_node *head)
+{
+	t_node	*current;
+	int		counter;
+
+	current = head;
+	counter = 0;
+	while (current)
+	{
+		counter += 1;
+		current = current->next;
+	}
+	return (counter);
+}
+
 int	main(int argc, char **argv)
 {
 	int		error;
@@ -37,6 +52,8 @@ int	main(int argc, char **argv)
 	head_a = create_linked_list(argv);
 	if (check_if_already_sorted(head_a))
 		return (0);
+	if (lst_len(head_a) == 2)
+		ft_printf("sa\n");
 	print_linkdlst(head_a);
 	return (0);
 }
