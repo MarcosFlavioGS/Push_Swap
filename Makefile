@@ -17,7 +17,8 @@ FLAGS = -Wall -Wextra -Werror
 SRC = 	main.c			\
 		ft_error.c		\
 		check_stack.c	\
-		create_list.c
+		create_list.c	\
+		check_sorted.c
 
 OBJ = ${SRC:.c=.o}
 
