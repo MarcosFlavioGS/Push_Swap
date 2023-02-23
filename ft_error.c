@@ -44,4 +44,3 @@ void	ft_error(int error)
 	}
 	exit (1);
 }
-

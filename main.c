@@ -27,14 +27,14 @@ void	print_linkdlst(t_node *head)
 int	main(int argc, char **argv)
 {
 	int		error;
-	t_node	*head_A;
+	t_node	*head_a;
 
 	if (argc < 2)
 		return (0);
 	error = check_stack(argv);
 	if (error != 0)
 		ft_error(error);
-	head_A = create_linked_list(argv);
-	print_linkdlst(head_A);
+	head_a = create_linked_list(argv);
+	print_linkdlst(head_a);
 	return (0);
 }
