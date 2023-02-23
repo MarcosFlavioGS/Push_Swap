@@ -6,7 +6,7 @@
 #    By: mflavio- <mflavio-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/02/22 16:13:23 by mflavio-          #+#    #+#              #
-#    Updated: 2023/02/22 16:13:52 by mflavio-         ###   ########.fr        #
+#    Updated: 2023/02/22 19:23:30 by mflavio-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,9 @@ NAME = push_swap
 
 FLAGS = -Wall -Wextra -Werror
 
-SRC = main.c
+SRC = 	main.c			\
+		ft_error.c		\
+		check_stack.c
 
 OBJ = ${SRC:.c=.o}
 

@@ -17,7 +17,9 @@
 typedef struct node
 {
 	int				x;
-	int				y;
 	struct t_node	*next;
 }	t_node;
+
+void	ft_error(int error);
+int		check_stack(char **stack);
 #endif
