@@ -28,15 +28,33 @@ int	num_count(int num, char **stack)
     return (count);
 }
 
+int	bigger_than_int(int x)
+{
+    int i;
+    int count;
+
+    i = 1;
+    count = 0;
+    while (stack[i])
+    {
+        if (ft_atoi(stack[i]) == num)
+            count++;
+        i++;
+    }
+    return (count);
+}
+
 int check_stack(char **stack)
 {
     int i;
     int j;
 	int	error1;
 	int	error2;
+	int	error3;
 
 	error1 = 0;
 	error2 = 0;
+	error3 = 0;
     i = 1;
     while (stack[i])
     {
@@ -47,11 +65,13 @@ int check_stack(char **stack)
                 error1 = 1;
             j++;
         }
+		if (bigger_than_int(ft_atoi(stack[i])))
+			error3 = 4;
 		if (num_count(ft_atoi(stack[i]), stack) > 1)
 			error2 = 2;
-		if (error1 && error2)
-			return (error1 + error2);
+		if (error1 && error2 && error3)
+			return (error1 + error2 + error3);
         i++;
     }
-    return (error1 + error2);
+    return (error1 + error2 + error3);
 }
