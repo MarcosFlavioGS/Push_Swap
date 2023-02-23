@@ -1,13 +1,13 @@
 #include<stdio.h>
 #include<stdlib.h>
-struct Node {
+typedef struct node {
     int data;
-    struct Node* next;
-};
-void insert(struct Node** root, int item)
+    struct node* next;
+}   t_node;
+void insert(t_node** root, int item)
 {
-   struct Node* temp = (struct Node*) malloc(sizeof(struct Node));
-    struct Node* ptr;
+    t_node* temp = (t_node*) malloc(sizeof(t_node));
+    t_node* ptr;
     temp->data = item;
     temp->next = NULL;
     if (*root == NULL)
@@ -19,25 +19,23 @@ void insert(struct Node** root, int item)
         ptr->next = temp;
     }
 }
-void print(struct Node* root)
+void print(t_node* root)
 {
     while (root != NULL) {
         printf("%d->", root->data);
         root = root->next;
     }
 }
-struct Node *arrayToList(int arr[], int n)
+t_node *arrayToList(char **argv)
 {
-    struct Node *root = NULL;
-    for (int i = 0; i < n; i++)
-        insert(&root, arr[i]);
+    t_node *root = NULL;
+    for (int i = 1; argv[i]; i++)
+        insert(&root, atoi(argv[i]));
 return root;
 }
-int main()
+int main(int argc, char **argv)
 {
-    int arr[] = { 0, 2, 3, 5, 1 };
-    int n = sizeof(arr) / sizeof(arr[0]);
-    struct Node* root = arrayToList(arr, n);
+    t_node* root = arrayToList(argv);
     print(root);
     return 0;
 }

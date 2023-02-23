@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mflavio- <mflavio-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mflavio- <mfghost69@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/22 16:13:26 by mflavio-          #+#    #+#             */
-/*   Updated: 2023/02/22 16:13:56 by mflavio-         ###   ########.fr       */
+/*   Updated: 2023/02/22 22:43:41 by mflavio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,8 @@
 
 typedef struct node
 {
-	int				x;
-	struct t_node	*next;
+	int			x;
+	struct node	*next;
 }	t_node;
 
 void	ft_error(int error);
