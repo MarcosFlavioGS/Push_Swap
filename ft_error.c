@@ -15,7 +15,15 @@
 // Todo: Make Enumerable for every error possible
 void	ft_error(int error)
 {
-	ft_printf("Error: %d", error);
+	if (error == 1)
+		ft_printf("Error: Some argument is not a digit.\n");
+	else if (error == 2)
+		ft_printf("Error: Duplicates present.\n");
+	else if (error == 3)
+	{
+		ft_printf("Error: Some argument is not a digit.\n");
+		ft_printf("Error: Duplicates present.\n");
+	}
 	exit (1);
 }
 
