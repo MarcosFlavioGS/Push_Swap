@@ -22,4 +22,5 @@ typedef struct node
 
 void	ft_error(int error);
 int		check_stack(char **stack);
+t_node	*create_linked_list(char **stack);
 #endif
