@@ -6,7 +6,7 @@
 /*   By: mflavio- <mflavio-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/22 17:30:52 by mflavio-          #+#    #+#             */
-/*   Updated: 2023/02/23 16:57:58 by mflavio-         ###   ########.fr       */
+/*   Updated: 2023/02/23 19:12:44 by mflavio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,20 +28,35 @@ int	num_count(int num, char **stack)
     return (count);
 }
 
-int	bigger_than_int(int x)
+int	bigger_than_int(long x)
+{
+    if (x > 2147483647 || x < -2147483648)
+        return (1);
+    return (0);
+}
+
+long    long_ft_atoi(char *str)
 {
     int i;
-    int count;
+    long long num;
+    int sign;
 
-    i = 1;
-    count = 0;
-    while (stack[i])
+    i = 0;
+    num = 0;
+    sign = 1;
+    if (str[i] == '-')
     {
-        if (ft_atoi(stack[i]) == num)
-            count++;
+        sign = -1;
         i++;
     }
-    return (count);
+    else if (str[i] == '+')
+        i++;
+    while (str[i] >= '0' && str[i] <= '9')
+    {
+        num = num * 10 + (str[i] - '0');
+        i++;
+    }
+    return (num * sign);
 }
 
 int check_stack(char **stack)
@@ -62,10 +77,15 @@ int check_stack(char **stack)
         while (stack[i][j])
         {
             if (ft_isdigit(stack[i][j]) == 0)
-                error1 = 1;
+            {
+                if (j == 0 && stack[i][j] == '-')
+                    j++;
+                else
+                    error1 = 1;
+            }
             j++;
         }
-		if (bigger_than_int(ft_atoi(stack[i])))
+		if (bigger_than_int(long_ft_atoi(stack[i])))
 			error3 = 4;
 		if (num_count(ft_atoi(stack[i]), stack) > 1)
 			error2 = 2;

@@ -19,10 +19,28 @@ void	ft_error(int error)
 		ft_printf("Error: Some argument is not a digit.\n");
 	else if (error == 2)
 		ft_printf("Error: Duplicates present.\n");
+	else if (error == 4)
+		ft_printf("Error: Value exceeds limit of an int.\n");
 	else if (error == 3)
 	{
 		ft_printf("Error: Some argument is not a digit.\n");
 		ft_printf("Error: Duplicates present.\n");
+	}
+	else if (error == 5)
+	{
+		ft_printf("Error: Some argument is not a digit.\n");
+		ft_printf("Error: Value exceeds limit of an int.\n");
+	}
+	else if (error == 6)
+	{
+		ft_printf("Error: Duplicates present.\n");
+		ft_printf("Error: Value exceeds limit of an int.\n");
+	}
+	else if (error == 7)
+	{
+		ft_printf("Error: Some argument is not a digit.\n");
+		ft_printf("Error: Duplicates present.\n");
+		ft_printf("Error: Value exceeds limit of an int.\n");
 	}
 	exit (1);
 }
