@@ -18,7 +18,8 @@ SRC = 	main.c			\
 		ft_error.c		\
 		check_stack.c	\
 		create_list.c	\
-		check_sorted.c
+		check_sorted.c	\
+		lst_len.c
 
 OBJ = ${SRC:.c=.o}
 
