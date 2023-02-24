@@ -24,9 +24,19 @@ void	print_linkdlst(t_node *head)
 	}
 }
 
+void	sort_3(t_node *head)
+{
+	int		arr[3];
+	
+	arr[0] = head->x;
+	arr[1] = head->next->x;
+	arr[2] = head->next->next->x;
+}
+
 int	main(int argc, char **argv)
 {
 	int		error;
+	int		list_len;
 	t_node	*head_a;
 
 	if (argc < 2)
@@ -37,8 +47,11 @@ int	main(int argc, char **argv)
 	head_a = create_linked_list(argv);
 	if (check_if_already_sorted(head_a))
 		return (0);
-	if (lst_len(head_a) == 2)
+	list_len = lst_len(head_a);
+	if (list_len == 2)
 		ft_printf("sa\n");
+	if (list_len == 3)
+		sort_3(head_a);
 	//print_linkdlst(head_a);
 	return (0);
 }
