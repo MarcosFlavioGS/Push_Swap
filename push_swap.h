@@ -30,4 +30,5 @@ int		check_stack(char **stack);
 t_node	*create_linked_list(char **stack);
 int		check_if_already_sorted(t_node *head);
 int		lst_len(t_node *head);
+void	get_index(t_node *head, int len);
 #endif
