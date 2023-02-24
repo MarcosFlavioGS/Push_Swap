@@ -19,8 +19,9 @@ static void	print_linkdlst(t_node *head)
 	current = head;
 	while (current)
 	{
-		ft_printf("%d\n|\nv\n", current->x);
-		ft_printf("%d\n|\nv\n", current->index);
+		ft_printf("%d\n", current->x);
+		ft_printf("Index: %d\n", current->index);
+		ft_printf("|\nv\n");
 		current = current->next;
 	}
 }
@@ -38,7 +39,7 @@ void	get_index(t_node *head, int len)
 		curr2 = head;
 		while (curr2)
 		{
-			if (curr2->x < curr->x)
+			if (curr2->x > curr->x)
 				counter += 1;
 			curr2 = curr2->next;
 		}
