@@ -20,7 +20,7 @@ static void	print_linkdlst(t_node *head)
 	while (current)
 	{
 		ft_printf("%d\n|\nv\n", current->x);
-		ft_printf("%d\n|\nv\n", current->pos);
+		ft_printf("%d\n|\nv\n", current->index);
 		current = current->next;
 	}
 }
@@ -30,21 +30,20 @@ void	get_index(t_node *head, int len)
 	t_node	*curr;
 	t_node	*curr2;
 	int		counter;
-	int		value;
 
 	curr = head;
-	curr2 = head;
 	while (curr)
 	{
 		counter = 0;
-		value = curr->x;
+		curr2 = head;
 		while (curr2)
 		{
-			if (value > curr2->x)
+			if (curr2->x < curr->x)
 				counter += 1;
 			curr2 = curr2->next;
 		}
-		curr->index = len - counter;
+		curr->index = (len - counter);
+		curr = curr->next;
 	}
 }
 
