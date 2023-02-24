@@ -20,18 +20,15 @@ static void	print_linkdlst(t_node *head)
 	while (current)
 	{
 		ft_printf("%d\n|\nv\n", current->x);
+		ft_printf("%d\n|\nv\n", current->pos);
 		current = current->next;
 	}
 }
 
-//static void	sort_3(t_node *head)
-//{
-	//int		arr[3];
-	
-	//arr[0] = head->x;
-	//arr[1] = head->next->x;
-	//arr[2] = head->next->next->x;
-//}
+void	get_index(t_node *head)
+{
+
+}
 
 int	main(int argc, char **argv)
 {
@@ -50,8 +47,7 @@ int	main(int argc, char **argv)
 	list_len = lst_len(head_a);
 	if (list_len == 2)
 		ft_printf("sa\n");
-	//if (list_len == 3)
-	//	sort_3(head_a);
+	get_index(head_a);
 	print_linkdlst(head_a);
 	return (0);
 }

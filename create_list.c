@@ -21,6 +21,7 @@ t_node	*create_linked_list(char **stack)
 
 	i = 1;
 	head = (t_node *)malloc(sizeof(t_node));
+	head->pos = i;
 	head->x = ft_atoi(stack[i++]);
 	head->next = NULL;
 	previous = head;
@@ -28,6 +29,7 @@ t_node	*create_linked_list(char **stack)
 	{
 		temp = (t_node *)malloc(sizeof(t_node));
 		temp->x = ft_atoi(stack[i]);
+		temp->pos = i;
 		temp->next = NULL;
 		previous->next = temp;
 		previous = temp;

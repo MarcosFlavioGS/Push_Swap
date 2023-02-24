@@ -14,10 +14,15 @@
 # define PUSH_SWAP_H
 # include "libft/libft.h"
 
-typedef struct node
+typedef struct s_node
 {
 	int			x;
-	struct node	*next;
+	int			index;
+	int			pos;
+	int			target_pos;
+	int			cost_a;
+	int			cost_b;
+	struct s_node	*next;
 }	t_node;
 
 void	ft_error(int error);
