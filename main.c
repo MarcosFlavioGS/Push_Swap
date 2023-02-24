@@ -27,7 +27,6 @@ static void	print_linkdlst(t_node *head)
 
 void	get_index(t_node *head)
 {
-
 }
 
 int	main(int argc, char **argv)
