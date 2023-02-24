@@ -25,8 +25,27 @@ static void	print_linkdlst(t_node *head)
 	}
 }
 
-void	get_index(t_node *head)
+void	get_index(t_node *head, int len)
 {
+	t_node	*curr;
+	t_node	*curr2;
+	int		counter;
+	int		value;
+
+	curr = head;
+	curr2 = head;
+	while (curr)
+	{
+		counter = 0;
+		value = curr->x;
+		while (curr2)
+		{
+			if (value > curr2->x)
+				counter += 1;
+			curr2 = curr2->next;
+		}
+		curr->index = len - counter;
+	}
 }
 
 int	main(int argc, char **argv)
@@ -46,7 +65,7 @@ int	main(int argc, char **argv)
 	list_len = lst_len(head_a);
 	if (list_len == 2)
 		ft_printf("sa\n");
-	get_index(head_a);
+	get_index(head_a, list_len);
 	print_linkdlst(head_a);
 	return (0);
 }
