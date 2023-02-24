@@ -6,13 +6,33 @@
 /*   By: mflavio- <mflavio-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/22 17:02:05 by mflavio-          #+#    #+#             */
-/*   Updated: 2023/02/22 17:02:07 by mflavio-         ###   ########.fr       */
+/*   Updated: 2023/02/24 17:38:17 by mflavio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
 // Todo: Make Enumerable for every error possible
+
+static void	error7(void)
+{
+	ft_printf("Error: Some argument is not a digit.\n");
+	ft_printf("Error: Duplicates present.\n");
+	ft_printf("Error: Value exceeds limit of an int.\n");
+}
+
+static void	error6(void)
+{
+	ft_printf("Error: Duplicates present.\n");
+	ft_printf("Error: Value exceeds limit of an int.\n");
+}
+
+static void	error5(void)
+{
+	ft_printf("Error: Some argument is not a digit.\n");
+	ft_printf("Error: Value exceeds limit of an int.\n");
+}
+
 void	ft_error(int error)
 {
 	if (error == 1)
@@ -27,20 +47,10 @@ void	ft_error(int error)
 		ft_printf("Error: Duplicates present.\n");
 	}
 	else if (error == 5)
-	{
-		ft_printf("Error: Some argument is not a digit.\n");
-		ft_printf("Error: Value exceeds limit of an int.\n");
-	}
+		error5();
 	else if (error == 6)
-	{
-		ft_printf("Error: Duplicates present.\n");
-		ft_printf("Error: Value exceeds limit of an int.\n");
-	}
+		error6();
 	else if (error == 7)
-	{
-		ft_printf("Error: Some argument is not a digit.\n");
-		ft_printf("Error: Duplicates present.\n");
-		ft_printf("Error: Value exceeds limit of an int.\n");
-	}
+		error7();
 	exit (1);
 }

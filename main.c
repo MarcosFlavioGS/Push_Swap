@@ -12,7 +12,7 @@
 
 #include "push_swap.h"
 
-void	print_linkdlst(t_node *head)
+static void	print_linkdlst(t_node *head)
 {
 	t_node	*current;
 
@@ -24,14 +24,14 @@ void	print_linkdlst(t_node *head)
 	}
 }
 
-void	sort_3(t_node *head)
-{
-	int		arr[3];
+//static void	sort_3(t_node *head)
+//{
+	//int		arr[3];
 	
-	arr[0] = head->x;
-	arr[1] = head->next->x;
-	arr[2] = head->next->next->x;
-}
+	//arr[0] = head->x;
+	//arr[1] = head->next->x;
+	//arr[2] = head->next->next->x;
+//}
 
 int	main(int argc, char **argv)
 {
@@ -50,8 +50,8 @@ int	main(int argc, char **argv)
 	list_len = lst_len(head_a);
 	if (list_len == 2)
 		ft_printf("sa\n");
-	if (list_len == 3)
-		sort_3(head_a);
-	//print_linkdlst(head_a);
+	//if (list_len == 3)
+	//	sort_3(head_a);
+	print_linkdlst(head_a);
 	return (0);
 }

@@ -6,13 +6,13 @@
 /*   By: mflavio- <mflavio-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/22 17:30:52 by mflavio-          #+#    #+#             */
-/*   Updated: 2023/02/23 19:12:44 by mflavio-         ###   ########.fr       */
+/*   Updated: 2023/02/24 17:39:01 by mflavio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	num_count(int num, char **stack)
+static int	num_count(int num, char **stack)
 {
 	int	i;
 	int	count;
@@ -28,14 +28,14 @@ int	num_count(int num, char **stack)
 	return (count);
 }
 
-int	bigger_than_int(long x)
+static int	bigger_than_int(long x)
 {
 	if (x > 2147483647 || x < -2147483648)
 		return (1);
 	return (0);
 }
 
-long	long_ft_atoi(char *str)
+static long	long_ft_atoi(char *str)
 {
 	int			i;
 	long long	num;
@@ -59,6 +59,24 @@ long	long_ft_atoi(char *str)
 	return (num * sign);
 }
 
+static void	check_digit(int i, int *j, int *error, char **stack)
+{
+	while (stack[i][*j])
+	{
+		if (stack[i][*j] < '0' || stack[i][*j] > '9')
+		{
+			if (stack[i][*j] == '-' || stack[i][*j] == '+')
+			{
+				if (*j != 0)
+					*error = 1;
+			}
+			else
+				*error = 1;
+		}
+		(*j)++;
+	}	
+}
+
 int	check_stack(char **stack)
 {
 	int	i;
@@ -74,17 +92,7 @@ int	check_stack(char **stack)
 	while (stack[i])
 	{
 		j = 0;
-		while (stack[i][j])
-		{
-			if (ft_isdigit(stack[i][j]) == 0)
-			{
-				if (j == 0 && stack[i][j] == '-')
-					j++;
-				else
-					error1 = 1;
-			}
-			j++;
-		}
+		check_digit(i, &j, &error1, stack);
 		if (bigger_than_int(long_ft_atoi(stack[i])))
 			error3 = 4;
 		if (num_count(ft_atoi(stack[i]), stack) > 1)
