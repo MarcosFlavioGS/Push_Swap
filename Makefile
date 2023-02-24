@@ -20,7 +20,8 @@ SRC = 	main.c			\
 		create_list.c	\
 		check_sorted.c	\
 		lst_len.c		\
-		get_index.c
+		get_index.c		\
+		sort_3.c
 
 OBJ = ${SRC:.c=.o}
 
