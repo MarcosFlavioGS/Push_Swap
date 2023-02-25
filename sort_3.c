@@ -1,6 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   sort_3.c                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mflavio- <mfghost69@gmail.com>             +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/02/25 00:07:43 by mflavio-          #+#    #+#             */
+/*   Updated: 2023/02/25 00:11:14 by mflavio-         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "push_swap.h"
 
-void	sort_3(t_node *head)
+int	sort_3(t_node *head)
 {
 	if (head->index == 1)
 		ft_printf("rra\nsa\n");
@@ -18,4 +30,5 @@ void	sort_3(t_node *head)
 		else
 			ft_printf("ra\nsa\n");
 	}
+	return (0);
 }

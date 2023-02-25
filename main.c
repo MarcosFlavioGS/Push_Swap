@@ -46,10 +46,7 @@ int	main(int argc, char **argv)
 		ft_printf("sa\n");
 	get_index(head_a, list_len);
 	if (list_len == 3)
-	{
-		sort_3(head_a);
-		return (0);
-	}
+		return (sort_3(head_a));
 	print_linkdlst(head_a);
 	return (0);
 }
