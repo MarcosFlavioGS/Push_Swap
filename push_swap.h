@@ -32,4 +32,8 @@ int		check_if_already_sorted(t_node *head);
 int		lst_len(t_node *head);
 void	get_index(t_node *head, int len);
 int		sort_3(t_node *head);
+void	print_linkdlst(t_node *head);
+// actions
+void	sa(t_node *head);
+void	ra(t_node *head);
 #endif

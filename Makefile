@@ -21,7 +21,10 @@ SRC = 	main.c			\
 		check_sorted.c	\
 		lst_len.c		\
 		get_index.c		\
-		sort_3.c
+		sort_3.c		\
+		print_list.c	\
+		sa.c			\
+		ra.c
 
 OBJ = ${SRC:.c=.o}
 

@@ -19,14 +19,14 @@ int	sort_3(t_node *head)
 	else if (head->index == 2)
 	{
 		if (head->next->index == 1)
-			ft_printf("sa\n");
+			sa(head);
 		else
 			ft_printf("rra\n");
 	}
 	else if (head->index == 3)
 	{
 		if (head->next->index == 1)
-			ft_printf("ra\n");
+			ra(head);
 		else
 			ft_printf("ra\nsa\n");
 	}
