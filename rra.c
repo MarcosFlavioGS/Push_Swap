@@ -1,41 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   sort_3.c                                           :+:      :+:    :+:   */
+/*   rra.c                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mflavio- <mflavio-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/25 00:07:43 by mflavio-          #+#    #+#             */
-/*   Updated: 2023/02/27 20:28:04 by mflavio-         ###   ########.fr       */
+/*   Created: 2023/02/27 20:24:38 by mflavio-          #+#    #+#             */
+/*   Updated: 2023/02/27 20:24:39 by mflavio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	sort_3(t_node *head)
+void	rra(t_node *head)
 {
-	if (head->index == 1)
+	t_node	*curr;
+	int		temp;
+
+	reverse_list(&head);
+	curr = head;
+	while (curr && curr->next)
 	{
-		rra(head);
-		sa(head);
+		temp = curr->x;
+		curr->x = curr->next->x;
+		curr->next->x = temp;
+		curr = curr->next;
 	}
-	else if (head->index == 2)
-	{
-		if (head->next->index == 1)
-			sa(head);
-		else
-			rra(head);
-	}
-	else if (head->index == 3)
-	{
-		if (head->next->index == 1)
-			ra(head);
-		else
-		{
-			ra(head);
-			sa(head);
-		}
-	}
-	print_linkdlst(head);
-	return (0);
+	reverse_list(&head);
+	ft_printf("rra\n");
 }

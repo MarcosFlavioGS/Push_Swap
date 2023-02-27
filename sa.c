@@ -6,7 +6,7 @@
 /*   By: mflavio- <mflavio-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/27 18:16:31 by mflavio-          #+#    #+#             */
-/*   Updated: 2023/02/27 18:16:33 by mflavio-         ###   ########.fr       */
+/*   Updated: 2023/02/27 20:27:33 by mflavio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,5 +20,4 @@ void	sa(t_node *head)
 	head->x = head->next->x;
 	head->next->x = temp;
 	ft_printf("sa\n");
-	print_linkdlst(head);
 }

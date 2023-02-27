@@ -1,41 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   sort_3.c                                           :+:      :+:    :+:   */
+/*   reverse_list.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mflavio- <mflavio-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/25 00:07:43 by mflavio-          #+#    #+#             */
-/*   Updated: 2023/02/27 20:28:04 by mflavio-         ###   ########.fr       */
+/*   Created: 2023/02/27 20:24:33 by mflavio-          #+#    #+#             */
+/*   Updated: 2023/02/27 20:24:35 by mflavio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	sort_3(t_node *head)
+void	reverse_list(t_node **head)
 {
-	if (head->index == 1)
+	t_node	*prev;
+	t_node	*curr;
+	t_node	*next;
+
+	curr = *head;
+	prev = NULL;
+	next = NULL;
+	while (curr)
 	{
-		rra(head);
-		sa(head);
+		next = curr->next;
+		curr->next = prev;
+		prev = curr;
+		curr = next;
 	}
-	else if (head->index == 2)
-	{
-		if (head->next->index == 1)
-			sa(head);
-		else
-			rra(head);
-	}
-	else if (head->index == 3)
-	{
-		if (head->next->index == 1)
-			ra(head);
-		else
-		{
-			ra(head);
-			sa(head);
-		}
-	}
-	print_linkdlst(head);
-	return (0);
+	*head = prev;
 }
