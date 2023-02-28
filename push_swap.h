@@ -37,5 +37,5 @@ void	reverse_list(t_node **head);
 // actions
 void	sa(t_node *head);
 void	ra(t_node *head);
-void	rra(t_node *head);
+void	rra(t_node **head);
 #endif

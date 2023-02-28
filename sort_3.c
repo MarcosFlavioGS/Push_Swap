@@ -16,7 +16,7 @@ int	sort_3(t_node *head)
 {
 	if (head->index == 1)
 	{
-		rra(head);
+		rra(&head);
 		sa(head);
 	}
 	else if (head->index == 2)
@@ -24,7 +24,7 @@ int	sort_3(t_node *head)
 		if (head->next->index == 1)
 			sa(head);
 		else
-			rra(head);
+			rra(&head);
 	}
 	else if (head->index == 3)
 	{
