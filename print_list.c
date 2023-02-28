@@ -19,6 +19,7 @@ void	print_linkdlst(t_node *head)
 	current = head;
 	while (current)
 	{
+		ft_printf("\n======Printing list======\n");
 		ft_printf("Value: %d\n", current->x);
 		ft_printf("Index: %d\n", current->index);
 		ft_printf("Pos: %d\n", current->pos);
