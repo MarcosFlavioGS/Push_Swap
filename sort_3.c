@@ -17,12 +17,12 @@ int	sort_3(t_node *head)
 	if (head->index == 1)
 	{
 		rra(&head);
-		sa(head);
+		sa(&head);
 	}
 	else if (head->index == 2)
 	{
 		if (head->next->index == 1)
-			sa(head);
+			sa(&head);
 		else
 			rra(&head);
 	}
@@ -33,7 +33,7 @@ int	sort_3(t_node *head)
 		else
 		{
 			ra(&head);
-			sa(head);
+			sa(&head);
 		}
 	}
 	print_linkdlst(head);

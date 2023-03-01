@@ -36,7 +36,7 @@ void	print_linkdlst(t_node *head);
 void	reverse_list(t_node **head);
 void	sort_bigger(t_node *head);
 // actions
-void	sa(t_node *head);
+void	sa(t_node **head);
 void	ra(t_node **head);
 void	rra(t_node **head);
 #endif

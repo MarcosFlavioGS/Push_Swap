@@ -12,12 +12,17 @@
 
 #include "push_swap.h"
 
-void	sa(t_node *head)
+void	sa(t_node **head)
 {
-	int		temp;
+	t_node	*curr;
+	t_node	*sec;
 
-	temp = head->x;
-	head->x = head->next->x;
-	head->next->x = temp;
+	if (!head || !(*head) || !(*head)->next)
+		return ;
+	curr = *head;
+	sec = (*head)->next;
+	curr->next = sec->next;
+	sec->next = curr;
+	*head = sec;
 	ft_printf("sa\n");
 }

@@ -16,7 +16,7 @@ void	ra(t_node **head)
 {
 	t_node	*curr;
 
-	if (!head || !(*head) || !(head)->next)
+	if (!head || !(*head) || !(*head)->next)
 		return ;
 	curr = *head;
 	while (curr->next)
