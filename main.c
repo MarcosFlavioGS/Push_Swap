@@ -33,7 +33,7 @@ int	main(int argc, char **argv)
 	if (list_len == 3)
 		return (sort_3(head_a));
 	if (list_len > 3)
-		sort_bigger(head_a);
+		sort_bigger(&head_a);
 	print_linkdlst(head_a);
 	return (0);
 }

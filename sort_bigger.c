@@ -12,7 +12,32 @@
 
 #include "push_swap.h"
 
-void	sort_bigger(t_node *head)
+void	pb(t_node **head_b, t_node *new)
 {
-	ft_printf("ignore: %d", head->x);
+	if (!(*new))
+		return;
+	if (!(*head_b))
+		*head_b = (t_node *) malloc(sizeof(t_node));
+	new->next = *head_b;
+	*head_b = new;
+}
+
+void	pb_all_to_b(t_node **head_a, t_node *head_b)
+{
+	t_node	*curr;
+
+	curr = head_a;
+	while (a)
+	{
+		pb(&head_b, *head_a);
+		curr = curr->next;
+	}
+}
+
+void	sort_bigger(t_node **head_a)
+{
+	t_node	*head_b;
+
+	head_b = NULL;
+	pb_all_to_b(&*head_a, head_b);
 }
