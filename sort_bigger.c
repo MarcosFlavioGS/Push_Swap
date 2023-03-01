@@ -14,4 +14,5 @@
 
 void	sort_bigger(t_node *head)
 {
+	ft_printf("ignore: %d", head->x);
 }

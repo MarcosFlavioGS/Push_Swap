@@ -12,18 +12,17 @@
 
 #include "push_swap.h"
 
-void	ra(t_node *head)
+void	ra(t_node **head)
 {
 	t_node	*curr;
-	int		temp;
 
-	curr = head;
-	while (curr && curr->next)
-	{
-		temp = curr->x;
-		curr->x = curr->next->x;
-		curr->next->x = temp;
+	if (!head || !(*head) || !(head)->next)
+		return ;
+	curr = *head;
+	while (curr->next)
 		curr = curr->next;
-	}
+	curr->next = *head;
+	*head = (*head)->next;
+	curr->next->next = NULL;
 	ft_printf("ra\n");
 }

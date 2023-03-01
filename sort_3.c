@@ -29,10 +29,10 @@ int	sort_3(t_node *head)
 	else if (head->index == 3)
 	{
 		if (head->next->index == 1)
-			ra(head);
+			ra(&head);
 		else
 		{
-			ra(head);
+			ra(&head);
 			sa(head);
 		}
 	}
