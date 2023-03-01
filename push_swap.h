@@ -34,6 +34,7 @@ void	get_index(t_node *head, int len);
 int		sort_3(t_node *head);
 void	print_linkdlst(t_node *head);
 void	reverse_list(t_node **head);
+void	sort_bigger(t_node *head);
 // actions
 void	sa(t_node *head);
 void	ra(t_node *head);

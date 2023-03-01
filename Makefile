@@ -24,6 +24,7 @@ SRC = 	main.c			\
 		sort_3.c		\
 		print_list.c	\
 		reverse_list.c	\
+		sort_bigger.c	\
 		sa.c			\
 		ra.c			\
 		rra.c
