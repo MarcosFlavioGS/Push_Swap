@@ -14,26 +14,20 @@
 
 void	sort_3(t_node **head)
 {
-	if ((*head)->index == 1)
-	{
+	int	index1;
+	int	index2;
+	int	index3;
+
+	index1 = (*head)->index;
+	index2 = (*head)->next->index;
+	index3 = (*head)->next->next->index;
+	if (index1 > index2 && index1 > index3)
+		ra(&*head);
+	if (index2 > index1 && index2 > index3)
 		rra(&*head);
+	index1 = (*head)->index;
+	index2 = (*head)->next->index;
+	index3 = (*head)->next->next->index;
+	if (index1 > index2)
 		sa(&*head);
-	}
-	else if ((*head)->index == 2)
-	{
-		if ((*head)->next->index == 1)
-			sa(&*head);
-		else
-			rra(&*head);
-	}
-	else if ((*head)->index == 3)
-	{
-		if ((*head)->next->index == 1)
-			ra(&*head);
-		else
-		{
-			ra(&*head);
-			sa(&*head);
-		}
-	}
 }
