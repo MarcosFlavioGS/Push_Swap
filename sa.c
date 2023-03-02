@@ -24,5 +24,4 @@ void	sa(t_node **head)
 	curr->next = sec->next;
 	sec->next = curr;
 	*head = sec;
-	ft_printf("sa\n");
 }

@@ -22,12 +22,21 @@ void	sort_3(t_node **head)
 	index2 = (*head)->next->index;
 	index3 = (*head)->next->next->index;
 	if (index1 > index2 && index1 > index3)
+	{
 		ra(&*head);
+		ft_printf("ra\n");
+	}
 	if (index2 > index1 && index2 > index3)
+	{
 		rra(&*head);
+		ft_printf("rra\n");
+	}
 	index1 = (*head)->index;
 	index2 = (*head)->next->index;
 	index3 = (*head)->next->next->index;
 	if (index1 > index2)
+	{
 		sa(&*head);
+		ft_printf("sa\n");
+	}
 }

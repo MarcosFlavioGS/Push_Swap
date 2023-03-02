@@ -24,5 +24,4 @@ void	ra(t_node **head)
 	curr->next = *head;
 	*head = (*head)->next;
 	curr->next->next = NULL;
-	ft_printf("ra\n");
 }

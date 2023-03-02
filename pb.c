@@ -23,5 +23,4 @@ void	pb(t_node **head_a, t_node **head_b)
 	*head_a = (*head_a)->next;
 	curr->next = *head_b;
 	*head_b = curr;
-	ft_printf("pb\n");
 }

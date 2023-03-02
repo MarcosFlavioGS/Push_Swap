@@ -12,7 +12,7 @@
 
 #include "push_swap.h"
 
-void	pb_all_to_b(t_node **head_a, t_node **head_b)
+static void	pb_all_to_b(t_node **head_a, t_node **head_b)
 {
 	t_node	*curr;
 
@@ -20,7 +20,10 @@ void	pb_all_to_b(t_node **head_a, t_node **head_b)
 	*head_a = (*head_a)->next->next->next;
 	curr->next->next->next = NULL;
 	while (*head_a)
+	{
 		pb(&*head_a, &*head_b);
+		ft_printf("pb\n");
+	}
 	*head_a = curr;
 }
 
