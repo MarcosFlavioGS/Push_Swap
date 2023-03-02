@@ -39,4 +39,5 @@ void	sort_bigger(t_node **head_a);
 void	sa(t_node **head);
 void	ra(t_node **head);
 void	rra(t_node **head);
+void	pb(t_node **head_a, t_node **head_b);
 #endif

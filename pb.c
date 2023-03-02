@@ -1,34 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   sort_bigger.c                                      :+:      :+:    :+:   */
+/*   pb.c                                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mflavio- <mflavio-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/01 17:18:36 by mflavio-          #+#    #+#             */
-/*   Updated: 2023/03/01 17:18:38 by mflavio-         ###   ########.fr       */
+/*   Created: 2023/03/02 18:31:04 by mflavio-          #+#    #+#             */
+/*   Updated: 2023/03/02 18:31:06 by mflavio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	pb_all_to_b(t_node **head_a, t_node **head_b)
+void	pb(t_node **head_a, t_node **head_b)
 {
 	t_node	*curr;
 
+	curr = NULL;
+	if (*head_a == NULL)
+		return ;
 	curr = *head_a;
-	*head_a = (*head_a)->next->next->next;
-	curr->next->next->next = NULL;
-	while (*head_a)
-		pb(&*head_a, &*head_b);
-	*head_a = curr;
-}
-
-void	sort_bigger(t_node **head_a)
-{
-	t_node	*head_b;
-
-	head_b = NULL;
-	pb_all_to_b(&*head_a, &head_b);
-	print_linkdlst(head_b);
+	*head_a = (*head_a)->next;
+	curr->next = *head_b;
+	*head_b = curr;
+	ft_printf("pb\n");
 }

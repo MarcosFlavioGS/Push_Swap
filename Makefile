@@ -27,7 +27,8 @@ SRC = 	main.c			\
 		sort_bigger.c	\
 		sa.c			\
 		ra.c			\
-		rra.c
+		rra.c			\
+		pb.c
 
 OBJ = ${SRC:.c=.o}
 
