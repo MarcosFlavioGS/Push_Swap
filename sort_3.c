@@ -12,30 +12,28 @@
 
 #include "push_swap.h"
 
-int	sort_3(t_node *head)
+void	sort_3(t_node **head)
 {
-	if (head->index == 1)
+	if ((*head)->index == 1)
 	{
-		rra(&head);
-		sa(&head);
+		rra(&*head);
+		sa(&*head);
 	}
-	else if (head->index == 2)
+	else if ((*head)->index == 2)
 	{
-		if (head->next->index == 1)
-			sa(&head);
+		if ((*head)->next->index == 1)
+			sa(&*head);
 		else
-			rra(&head);
+			rra(&*head);
 	}
-	else if (head->index == 3)
+	else if ((*head)->index == 3)
 	{
-		if (head->next->index == 1)
-			ra(&head);
+		if ((*head)->next->index == 1)
+			ra(&*head);
 		else
 		{
-			ra(&head);
-			sa(&head);
+			ra(&*head);
+			sa(&*head);
 		}
 	}
-	print_linkdlst(head);
-	return (0);
 }

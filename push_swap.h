@@ -31,7 +31,7 @@ t_node	*create_linked_list(char **stack);
 int		check_if_already_sorted(t_node *head);
 int		lst_len(t_node *head);
 void	get_index(t_node *head, int len);
-int		sort_3(t_node *head);
+void	sort_3(t_node **head);
 void	print_linkdlst(t_node *head);
 void	reverse_list(t_node **head);
 void	sort_bigger(t_node **head_a);

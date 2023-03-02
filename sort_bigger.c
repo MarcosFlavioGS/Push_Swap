@@ -30,5 +30,7 @@ void	sort_bigger(t_node **head_a)
 
 	head_b = NULL;
 	pb_all_to_b(&*head_a, &head_b);
+	sort_3(&*head_a);
 	print_linkdlst(head_b);
+	print_linkdlst(*head_a);
 }
