@@ -6,7 +6,7 @@
 /*   By: mflavio- <mflavio-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/01 17:18:36 by mflavio-          #+#    #+#             */
-/*   Updated: 2023/03/01 17:18:38 by mflavio-         ###   ########.fr       */
+/*   Updated: 2023/03/03 17:32:41 by mflavio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,30 @@
 
 static void	pb_all_to_b(t_node **head_a, t_node **head_b)
 {
-	t_node	*curr;
+	int		len;
+	int		i;
 
-	curr = *head_a;
-	*head_a = (*head_a)->next->next->next;
-	curr->next->next->next = NULL;
-	while (*head_a)
+	len = lst_len(*head_a);
+	i = 0;
+	while (*head_a && i < len)
+	{
+		if ((*head_a)->index < len / 2)
+		{
+			pb(&*head_a, &*head_b);
+			ft_printf("pb\n");
+		}
+		else
+		{
+			ra(&*head_a);
+			ft_printf("ra\n");
+		}
+		i++;
+	}
+	while (lst_len(*head_a) > 3)
 	{
 		pb(&*head_a, &*head_b);
 		ft_printf("pb\n");
 	}
-	*head_a = curr;
 }
 
 void	sort_bigger(t_node **head_a)
