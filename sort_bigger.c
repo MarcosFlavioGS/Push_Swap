@@ -6,7 +6,7 @@
 /*   By: mflavio- <mflavio-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/01 17:18:36 by mflavio-          #+#    #+#             */
-/*   Updated: 2023/03/03 17:32:41 by mflavio-         ###   ########.fr       */
+/*   Updated: 2023/03/07 19:40:32 by mflavio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,6 +47,8 @@ void	sort_bigger(t_node **head_a)
 	head_b = NULL;
 	pb_all_to_b(&*head_a, &head_b);
 	sort_3(&*head_a);
+	get_position(*head_a);
+	get_position(head_b);
 	print_linkdlst(head_b);
 	print_linkdlst(*head_a);
 }

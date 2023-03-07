@@ -6,7 +6,7 @@
 #    By: mflavio- <mflavio-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/02/22 16:13:23 by mflavio-          #+#    #+#              #
-#    Updated: 2023/02/22 19:23:30 by mflavio-         ###   ########.fr        #
+#    Updated: 2023/03/07 19:16:53 by mflavio-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,6 +25,7 @@ SRC = 	main.c			\
 		print_list.c	\
 		reverse_list.c	\
 		sort_bigger.c	\
+		get_position.c	\
 		sa.c			\
 		ra.c			\
 		rra.c			\
