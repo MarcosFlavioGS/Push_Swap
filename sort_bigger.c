@@ -64,4 +64,5 @@ void	sort_bigger(t_node **head_a)
 		get_tgt_pos(head_b, *head_a);
 	}
 	*/
+	clear_stack(&head_b);
 }
