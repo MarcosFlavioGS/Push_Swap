@@ -6,7 +6,7 @@
 /*   By: mflavio- <mflavio-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/22 16:13:26 by mflavio-          #+#    #+#             */
-/*   Updated: 2023/03/07 19:21:59 by mflavio-         ###   ########.fr       */
+/*   Updated: 2023/03/28 17:57:50 by mflavio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,7 @@ void	print_linkdlst(t_node *head);
 void	reverse_list(t_node **head);
 void	sort_bigger(t_node **head_a);
 void	get_position(t_node *head);
+void	get_tgt_pos(t_node *head_b, t_node *head_a);
 // actions
 void	sa(t_node **head);
 void	ra(t_node **head);

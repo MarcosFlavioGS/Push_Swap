@@ -6,7 +6,7 @@
 /*   By: mflavio- <mflavio-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/01 17:18:36 by mflavio-          #+#    #+#             */
-/*   Updated: 2023/03/07 19:40:32 by mflavio-         ###   ########.fr       */
+/*   Updated: 2023/03/28 17:30:11 by mflavio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,4 +51,9 @@ void	sort_bigger(t_node **head_a)
 	get_position(head_b);
 	print_linkdlst(head_b);
 	print_linkdlst(*head_a);
+	while (*head_b)
+	{
+		find_current_position(&*head_a, &head_b);
+		get_tgt_pos(head_b, *head_a);
+	}
 }
