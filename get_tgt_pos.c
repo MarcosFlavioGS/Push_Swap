@@ -7,7 +7,7 @@ void	get_tgt_pos(t_node *head_b, t_node *head_a)
   int		bigger;
   int		tgt;
   
-  biger = 0;
+  bigger = 0;
   tgt = 0;
   curr = head_b;
   curr_a = head_a;
@@ -27,10 +27,12 @@ void	get_tgt_pos(t_node *head_b, t_node *head_a)
       }
       curr_a = curr_a->next;
     }
+	/*
     if (bigger == 0)
-      pass
+		pass;
     curr->tgt_pos = tgt;
     curr = curr->next;
     curr_a = head_a;
+	*/
   }
 }

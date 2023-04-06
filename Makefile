@@ -14,24 +14,24 @@ NAME = push_swap
 
 FLAGS = -Wall -Wextra -Werror
 
-SRC = 	main.c		\
-	ft_error.c		\
-	check_stack.c	\
-	create_list.c	\
-	check_sorted.c	\
-	lst_len.c		\
-	get_index.c		\
-	sort_3.c		\
-	print_list.c	\
-	reverse_list.c	\
-	sort_bigger.c	\
-	get_position.c	\
-	get_tgt_pos.c	\
-	sa.c			\
-	ra.c			\
-	rra.c			\
-	pb.c			\
-	pb
+SRC = 	main.c			\
+		ft_error.c		\
+		check_stack.c	\
+		create_list.c	\
+		check_sorted.c	\
+		lst_len.c		\
+		get_index.c		\
+		sort_3.c		\
+		print_list.c	\
+		reverse_list.c	\
+		sort_bigger.c	\
+		get_position.c	\
+		get_tgt_pos.c	\
+		sa.c			\
+		ra.c			\
+		rra.c			\
+		pb.c			\
+		clear_stack.c
 
 OBJ = ${SRC:.c=.o}
 

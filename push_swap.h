@@ -37,6 +37,7 @@ void	reverse_list(t_node **head);
 void	sort_bigger(t_node **head_a);
 void	get_position(t_node *head);
 void	get_tgt_pos(t_node *head_b, t_node *head_a);
+void	clear_stack(t_node **stack);
 // actions
 void	sa(t_node **head);
 void	ra(t_node **head);

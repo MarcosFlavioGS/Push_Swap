@@ -37,5 +37,6 @@ int	main(int argc, char **argv)
 	}
 	if (list_len > 3)
 		sort_bigger(&head_a);
+    clear_stack(&head_a);
 	return (0);
 }

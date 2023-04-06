@@ -12,6 +12,12 @@
 
 #include "push_swap.h"
 
+void	find_current_position(t_node *a, t_node *b)
+{
+	get_position(a);
+	get_position(b);
+}
+
 static void	pb_all_to_b(t_node **head_a, t_node **head_b)
 {
 	int		len;
@@ -51,9 +57,11 @@ void	sort_bigger(t_node **head_a)
 	get_position(head_b);
 	print_linkdlst(head_b);
 	print_linkdlst(*head_a);
+	/*
 	while (*head_b)
 	{
-		find_current_position(&*head_a, &head_b);
+		find_current_position(*head_a, head_b);
 		get_tgt_pos(head_b, *head_a);
 	}
+	*/
 }
