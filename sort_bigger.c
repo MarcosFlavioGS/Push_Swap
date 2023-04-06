@@ -58,7 +58,7 @@ void	sort_bigger(t_node **head_a)
 	print_linkdlst(head_b);
 	print_linkdlst(*head_a);
 	/*
-	while (*head_b)
+	while (head_b)
 	{
 		find_current_position(*head_a, head_b);
 		get_tgt_pos(head_b, *head_a);
