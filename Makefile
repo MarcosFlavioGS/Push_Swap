@@ -6,7 +6,7 @@
 #    By: mflavio- <mflavio-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/02/22 16:13:23 by mflavio-          #+#    #+#              #
-#    Updated: 2023/03/28 17:31:00 by mflavio-         ###   ########.fr        #
+#    Updated: 2023/04/11 19:50:50 by mflavio-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -31,6 +31,7 @@ SRC = 	main.c			\
 		ra.c			\
 		rra.c			\
 		pb.c			\
+		pa.C			\
 		clear_stack.c
 
 OBJ = ${SRC:.c=.o}
