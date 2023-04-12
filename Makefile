@@ -23,7 +23,6 @@ SRC = 	main.c			\
 		get_index.c		\
 		sort_3.c		\
 		print_list.c	\
-		reverse_list.c	\
 		sort_bigger.c	\
 		get_position.c	\
 		get_tgt_pos.c	\
