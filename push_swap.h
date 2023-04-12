@@ -36,7 +36,8 @@ void	print_linkdlst(t_node *head);
 void	reverse_list(t_node **head);
 void	sort_bigger(t_node **head_a);
 void	get_position(t_node *head);
-void	get_tgt_pos(t_node *head_b, t_node *head_a);
+void	get_tgt_pos(t_node **head_b, t_node **head_a);
+void	calculate_move_cost(t_node **head_a, t_node **head_b);
 void	clear_stack(t_node **stack);
 // actions
 void	push(t_node **stack_a, t_node **stack_b, int n);

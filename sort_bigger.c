@@ -51,7 +51,8 @@ void	sort_bigger(t_node **head_a)
 	while (head_b)
 	{
 		find_current_position(*head_a, head_b);
-		//get_tgt_pos(head_b, *head_a);
+		get_tgt_pos(&head_b, &*head_a);
+		calculate_move_cost(&*head_a, &head_b);
 	}
 	clear_stack(&head_b);
 }

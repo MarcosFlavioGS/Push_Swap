@@ -27,6 +27,7 @@ SRC = 	main.c			\
 		sort_bigger.c	\
 		get_position.c	\
 		get_tgt_pos.c	\
+		calc_moves.c	\
 		clear_stack.c	\
 		push.c			\
 		rotate.c		\
