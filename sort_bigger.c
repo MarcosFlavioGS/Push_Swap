@@ -28,13 +28,13 @@ static void	pb_all_to_b(t_node **head_a, t_node **head_b)
 	while (*head_a && i < len)
 	{
 		if ((*head_a)->index < len / 2)
-			push(&*head_a, &*head_b, 2);
+			push(&*head_a, &*head_b, 1);
 		else
-			rotate(&*head_a, 1);
+			rotate(&*head_a, 0);
 		i++;
 	}
 	while (lst_len(*head_a) > 3)
-		push(&*head_a, &*head_b, 2);
+		push(&*head_a, &*head_b, 1);
 }
 
 void	sort_bigger(t_node **head_a)

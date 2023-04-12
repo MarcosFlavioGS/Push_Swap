@@ -12,7 +12,4 @@
 
 #include "push_swap.h"
 
-void	get_tgt_pos(t_node *head_b, t_node *head_a)
-{
-	ft_printf("Hello %d%d\n", head_a->x, head_b->x);
-}
+void	get_tgt_pos(t_node *head_b, t_node *head_a);

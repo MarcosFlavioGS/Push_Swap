@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   swap.c                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mflavio- <mflavio-@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/04/12 18:49:01 by mflavio-          #+#    #+#             */
+/*   Updated: 2023/04/12 18:49:03 by mflavio-         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "push_swap.h"
 
 static void	sa(t_node **head)
@@ -32,7 +44,9 @@ static void	sb(t_node **head)
 
 void	swap(t_node **stack, int n)
 {
-	void	(*func_array[])(t_node **) = {NULL, sa, sb};
+	void	(*func_array[2])(t_node **);
 
+	func_array[0] = sa;
+	func_array[1] = sb;
 	(*func_array[n])(&*stack);
 }

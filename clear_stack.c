@@ -6,7 +6,7 @@
 /*   By: mflavio- <mflavio-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/12 14:55:37 by mflavio-          #+#    #+#             */
-/*   Updated: 2023/04/12 14:55:39 by mflavio-         ###   ########.fr       */
+/*   Updated: 2023/04/12 18:50:12 by mflavio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,9 @@ void	clear_stack(t_node **stack)
 
 	while (*stack)
 	{
-		tmp = (*stack)->next;
-		free(*stack);
-		*stack = tmp;
+		tmp = *stack;
+		*stack = (*stack)->next;
+		free(tmp);
 	}
 }
+	
