@@ -6,7 +6,7 @@
 /*   By: mflavio- <mflavio-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/01 17:18:36 by mflavio-          #+#    #+#             */
-/*   Updated: 2023/04/11 19:32:41 by mflavio-         ###   ########.fr       */
+/*   Updated: 2023/04/12 16:44:14 by mflavio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,22 +28,13 @@ static void	pb_all_to_b(t_node **head_a, t_node **head_b)
 	while (*head_a && i < len)
 	{
 		if ((*head_a)->index < len / 2)
-		{
-			pb(&*head_a, &*head_b);
-			ft_printf("pb\n");
-		}
+			push(&*head_a, &*head_b, 2);
 		else
-		{
-			ra(&*head_a);
-			ft_printf("ra\n");
-		}
+			rotate(&*head_a, 1);
 		i++;
 	}
 	while (lst_len(*head_a) > 3)
-	{
-		pb(&*head_a, &*head_b);
-		ft_printf("pb\n");
-	}
+		push(&*head_a, &*head_b, 2);
 }
 
 void	sort_bigger(t_node **head_a)
@@ -60,7 +51,7 @@ void	sort_bigger(t_node **head_a)
 	while (head_b)
 	{
 		find_current_position(*head_a, head_b);
-		get_tgt_pos(head_b, *head_a);
+		//get_tgt_pos(head_b, *head_a);
 	}
 	clear_stack(&head_b);
 }

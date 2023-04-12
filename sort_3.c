@@ -6,7 +6,7 @@
 /*   By: mflavio- <mflavio-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/25 00:07:43 by mflavio-          #+#    #+#             */
-/*   Updated: 2023/02/27 20:28:04 by mflavio-         ###   ########.fr       */
+/*   Updated: 2023/04/12 16:35:11 by mflavio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,21 +22,12 @@ void	sort_3(t_node **head)
 	index2 = (*head)->next->index;
 	index3 = (*head)->next->next->index;
 	if (index1 > index2 && index1 > index3)
-	{
-		ra(&*head);
-		ft_printf("ra\n");
-	}
+		rotate(&*head, 1);
 	if (index2 > index1 && index2 > index3)
-	{
-		rra(&*head);
-		ft_printf("rra\n");
-	}
+		reverse_rotate(&*head, 1);
 	index1 = (*head)->index;
 	index2 = (*head)->next->index;
 	index3 = (*head)->next->next->index;
 	if (index1 > index2)
-	{
-		sa(&*head);
-		ft_printf("sa\n");
-	}
+		swap(&*head, 1);
 }

@@ -27,12 +27,11 @@ SRC = 	main.c			\
 		sort_bigger.c	\
 		get_position.c	\
 		get_tgt_pos.c	\
-		sa.c			\
-		ra.c			\
-		rra.c			\
-		pb.c			\
-		pa.C			\
-		clear_stack.c
+		clear_stack.c	\
+		push.c			\
+		rotate.c		\
+		swap.c			\
+		reverse_rotate.c
 
 OBJ = ${SRC:.c=.o}
 
