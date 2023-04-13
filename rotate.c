@@ -40,19 +40,23 @@ static void	rb(t_node **head)
 	curr->next->next = NULL;
 }
 
+void	rr(t_node **head_a, t_node **head_b)
+{
+	void	(*func_array[2])(t_node **);
+
+	func_array[0] = ra;
+	func_array[1] = rb;
+	(*func_array[0])(&*head_a);
+	(*func_array[1])(&*head_b);
+	ft_printf("rr\n");
+}
+
 void	rotate(t_node **stack, int n)
 {
 	void	(*func_array[2])(t_node **);
 
 	func_array[0] = ra;
 	func_array[1] = rb;
-	if (n == 3)
-	{
-		(*func_array[0])(&*stack);
-		(*func_array[1])(&*stack);
-		ft_printf("rr\n");
-		return ;
-	}
 	(*func_array[n])(&*stack);
 	if (n == 0)
 		ft_printf("ra\n");

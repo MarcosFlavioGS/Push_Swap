@@ -40,19 +40,23 @@ static void	rrb(t_node **head)
 	*head = last;
 }
 
+void	rrr(t_node **head_a, t_node **head_b)
+{
+	void	(*func_array[2])(t_node **);
+
+	func_array[0] = rra;
+	func_array[1] = rrb;
+	(*func_array[0])(&*head_a);
+	(*func_array[1])(&*head_b);
+	ft_printf("rrr\n");
+}
+
 void	reverse_rotate(t_node **stack, int n)
 {
 	void	(*func_array[2])(t_node **);
 
 	func_array[0] = rra;
 	func_array[1] = rrb;
-	if (n == 3)
-	{
-		(*func_array[0])(&*stack);
-		(*func_array[1])(&*stack);
-		ft_printf("rrr\n");
-		return ;
-	}
 	(*func_array[n])(&*stack);
 	if (n == 0)
 		ft_printf("rra\n");

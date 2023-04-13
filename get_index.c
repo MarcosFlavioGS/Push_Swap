@@ -33,3 +33,25 @@ void	get_index(t_node *head, int len)
 		curr = curr->next;
 	}
 }
+int	get_lowest_index_position(t_node **head_a)
+{
+	t_node	*tmp;
+	int		lowest_index;
+	int		lowest_pos;
+
+	tmp = *head_a;
+	lowest_index = 2147483647;
+	get_position(*head_a);
+	lowest_pos = tmp->pos;
+	while (tmp)
+	{
+		if (tmp->index < lowest_index)
+		{
+			lowest_index = tmp->index;
+			lowest_pos = tmp->pos;
+		}
+		tmp = tmp->next;
+	}
+	return (lowest_pos);
+}
+
