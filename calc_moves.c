@@ -32,3 +32,25 @@ void	calculate_move_cost(t_node **head_a, t_node **head_b)
 		tmp = tmp->next;
 	}
 }
+
+void	exec_cheapest_move(t_node **head_a, t_node **head_b)
+{
+	t_node	*tmp;
+	int		cheapest;
+	int		cost_a;
+	int		cost_b;
+
+	tmp = *head_b;
+	cheapest = 2147483647;
+	while (tmp)
+	{
+		if (num_abs(tmp->cost_a) + num_abs(tmp->cost_b) < num_abs(cheapest))
+		{
+			cheapest = num_abs(tmp->cost_b) + num_abs(tmp->cost_a);
+			cost_a = tmp->cost_a;
+			cost_b = tmp->cost_b;
+		}
+		tmp = tmp->next;
+	}
+	do_move(head_a, head_b, cost_a, cost_b);
+}

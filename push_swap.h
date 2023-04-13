@@ -38,7 +38,9 @@ void	sort_bigger(t_node **head_a);
 void	get_position(t_node *head);
 void	get_tgt_pos(t_node **head_b, t_node **head_a);
 void	calculate_move_cost(t_node **head_a, t_node **head_b);
+void	exec_cheapest_move(t_node **head_a, t_node **head_b);
 void	clear_stack(t_node **stack);
+int		num_abs(int n);
 // actions
 void	push(t_node **stack_a, t_node **stack_b, int n);
 void	swap(t_node **stack, int n);

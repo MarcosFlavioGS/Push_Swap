@@ -24,7 +24,6 @@ static void	rra(t_node **head)
 	curr->next = NULL;
 	last->next = *head;
 	*head = last;
-	ft_printf("rra\n");
 }
 
 static void	rrb(t_node **head)
@@ -39,7 +38,6 @@ static void	rrb(t_node **head)
 	curr->next = NULL;
 	last->next = *head;
 	*head = last;
-	ft_printf("rrb\n");
 }
 
 void	reverse_rotate(t_node **stack, int n)
@@ -48,5 +46,16 @@ void	reverse_rotate(t_node **stack, int n)
 
 	func_array[0] = rra;
 	func_array[1] = rrb;
+	if (n == 3)
+	{
+		(*func_array[0])(&*stack);
+		(*func_array[1])(&*stack);
+		ft_printf("rrr\n");
+		return ;
+	}
 	(*func_array[n])(&*stack);
+	if (n == 0)
+		ft_printf("rra\n");
+	else if (n == 1)
+		ft_printf("rrb\n");
 }
