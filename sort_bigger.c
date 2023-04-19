@@ -62,23 +62,28 @@ static void	shift_stack(t_node **head_a)
 	}
 }
 
-void	sort_bigger(t_node **head_a)
+void	sort_bigger(t_node **head_a, int *len)
 {
 	t_node	*head_b;
 
 	head_b = NULL;
-	pb_all_to_b(&*head_a, &head_b);
-	sort_3(&*head_a);
-	get_position(*head_a);
-	get_position(head_b);
-	while (head_b)
+	if (*len > 5)
+		radix(&*head_a, &head_b);
+	else
 	{
-		find_current_position(*head_a, head_b);
-		get_tgt_pos(&head_b, &*head_a);
-		calculate_move_cost(&*head_a, &head_b);
-		exec_cheapest_move(&*head_a, &head_b);
+		pb_all_to_b(&*head_a, &head_b);
+		sort_3(&*head_a);
+		get_position(*head_a);
+		get_position(head_b);
+		while (head_b)
+		{
+			find_current_position(*head_a, head_b);
+			get_tgt_pos(&head_b, &*head_a);
+			calculate_move_cost(&*head_a, &head_b);
+			exec_cheapest_move(&*head_a, &head_b);
+		}
+		if (!check_if_already_sorted(*head_a))
+			shift_stack(head_a);
 	}
-	if (!check_if_already_sorted(*head_a))
-		shift_stack(head_a);
 	clear_stack(&head_b);
 }
