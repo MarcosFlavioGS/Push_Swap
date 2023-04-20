@@ -12,8 +12,6 @@
 
 #include "push_swap.h"
 
-// Todo: Make Enumerable for every error possible
-
 static void	error7(void)
 {
 	ft_printf("Error: Some argument is not a digit.\n");
