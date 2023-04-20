@@ -33,7 +33,6 @@ int		lst_len(t_node *head);
 void	get_index(t_node *head, int len);
 int		get_lowest_index_position(t_node **head_a);
 void	sort_3(t_node **head);
-void	reverse_list(t_node **head);
 void	sort_bigger(t_node **head_a, int *len);
 void	get_position(t_node *head);
 void	get_tgt_pos(t_node **head_b, t_node **head_a);
