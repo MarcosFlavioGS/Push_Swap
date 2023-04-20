@@ -12,22 +12,22 @@
 
 #include "push_swap.h"
 
-void	sort_3(t_node **head)
+void	sort_3(t_node **stack)
 {
 	int	index1;
 	int	index2;
 	int	index3;
 
-	index1 = (*head)->index;
-	index2 = (*head)->next->index;
-	index3 = (*head)->next->next->index;
+	index1 = (*stack)->index;
+	index2 = (*stack)->next->index;
+	index3 = (*stack)->next->next->index;
 	if (index1 > index2 && index1 > index3)
-		rotate(&*head, 0);
+		rotate(&*stack, 0);
 	if (index2 > index1 && index2 > index3)
-		reverse_rotate(&*head, 0);
-	index1 = (*head)->index;
-	index2 = (*head)->next->index;
-	index3 = (*head)->next->next->index;
+		reverse_rotate(&*stack, 0);
+	index1 = (*stack)->index;
+	index2 = (*stack)->next->index;
+	index3 = (*stack)->next->next->index;
 	if (index1 > index2)
-		swap(&*head, 0);
+		swap(&*stack, 0);
 }

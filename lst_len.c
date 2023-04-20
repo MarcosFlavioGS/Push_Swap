@@ -12,12 +12,12 @@
 
 #include "push_swap.h"
 
-int	lst_len(t_node *head)
+int	lst_len(t_node *stack)
 {
 	t_node	*current;
 	int		counter;
 
-	current = head;
+	current = stack;
 	counter = 0;
 	while (current)
 	{

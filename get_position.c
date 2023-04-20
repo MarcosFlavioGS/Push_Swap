@@ -12,13 +12,13 @@
 
 #include "push_swap.h"
 
-void	get_position(t_node *head)
+void	get_position(t_node *stack)
 {
 	t_node	*curr;
 	int		i;
 
 	i = 0;
-	curr = head;
+	curr = stack;
 	while (curr != NULL)
 	{
 		curr->pos = i;

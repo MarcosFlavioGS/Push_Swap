@@ -12,11 +12,11 @@
 
 #include "push_swap.h"
 
-int	check_if_already_sorted(t_node *head)
+int	check_if_already_sorted(t_node *stack)
 {
 	t_node	*current;
 
-	current = head;
+	current = stack;
 	while (current->next)
 	{
 		if (current->x > current->next->x)

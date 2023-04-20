@@ -12,17 +12,17 @@
 
 #include "push_swap.h"
 
-void	get_index(t_node *head, int len)
+void	get_index(t_node *stack, int len)
 {
 	t_node	*curr;
 	t_node	*curr2;
 	int		counter;
 
-	curr = head;
+	curr = stack;
 	while (curr)
 	{
 		counter = 0;
-		curr2 = head;
+		curr2 = stack;
 		while (curr2)
 		{
 			if (curr2->x > curr->x)
@@ -34,15 +34,15 @@ void	get_index(t_node *head, int len)
 	}
 }
 
-int	get_lowest_index_position(t_node **head_a)
+int	get_lowest_index_position(t_node **stack_a)
 {
 	t_node	*tmp;
 	int		lowest_index;
 	int		lowest_pos;
 
-	tmp = *head_a;
+	tmp = *stack_a;
 	lowest_index = 2147483647;
-	get_position(*head_a);
+	get_position(*stack_a);
 	lowest_pos = tmp->pos;
 	while (tmp)
 	{

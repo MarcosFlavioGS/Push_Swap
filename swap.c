@@ -6,39 +6,39 @@
 /*   By: mflavio- <mflavio-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/12 18:49:01 by mflavio-          #+#    #+#             */
-/*   Updated: 2023/04/12 18:49:03 by mflavio-         ###   ########.fr       */
+/*   Updated: 2023/04/20 17:55:04 by mflavio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-static void	sa(t_node **head)
+static void	sa(t_node **stack)
 {
 	t_node	*curr;
 	t_node	*sec;
 
-	if (!head || !(*head) || !(*head)->next)
+	if (!stack || !(*stack) || !(*stack)->next)
 		return ;
-	curr = *head;
-	sec = (*head)->next;
+	curr = *stack;
+	sec = (*stack)->next;
 	curr->next = sec->next;
 	sec->next = curr;
-	*head = sec;
+	*stack = sec;
 	ft_printf("sa\n");
 }
 
-static void	sb(t_node **head)
+static void	sb(t_node **stack)
 {
 	t_node	*curr;
 	t_node	*sec;
 
-	if (!head || !(*head) || !(*head)->next)
+	if (!stack || !(*stack) || !(*stack)->next)
 		return ;
-	curr = *head;
-	sec = (*head)->next;
+	curr = *stack;
+	sec = (*stack)->next;
 	curr->next = sec->next;
 	sec->next = curr;
-	*head = sec;
+	*stack = sec;
 	ft_printf("sb\n");
 }
 

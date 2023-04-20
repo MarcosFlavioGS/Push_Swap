@@ -6,37 +6,37 @@
 /*   By: mflavio- <mflavio-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/12 18:48:56 by mflavio-          #+#    #+#             */
-/*   Updated: 2023/04/12 18:48:59 by mflavio-         ###   ########.fr       */
+/*   Updated: 2023/04/20 17:52:50 by mflavio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-static void	pa(t_node **head_a, t_node **head_b)
+static void	pa(t_node **stack_a, t_node **stack_b)
 {
 	t_node	*curr;
 
 	curr = NULL;
-	if (*head_b == NULL)
+	if (*stack_b == NULL)
 		return ;
-	curr = *head_b;
-	*head_b = (*head_b)->next;
-	curr->next = *head_a;
-	*head_a = curr;
+	curr = *stack_b;
+	*stack_b = (*stack_b)->next;
+	curr->next = *stack_a;
+	*stack_a = curr;
 	ft_printf("pa\n");
 }
 
-static void	pb(t_node **head_a, t_node **head_b)
+static void	pb(t_node **stack_a, t_node **stack_b)
 {
 	t_node	*curr;
 
 	curr = NULL;
-	if (*head_a == NULL)
+	if (*stack_a == NULL)
 		return ;
-	curr = *head_a;
-	*head_a = (*head_a)->next;
-	curr->next = *head_b;
-	*head_b = curr;
+	curr = *stack_a;
+	*stack_a = (*stack_a)->next;
+	curr->next = *stack_b;
+	*stack_b = curr;
 	ft_printf("pb\n");
 }
 

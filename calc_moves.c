@@ -6,21 +6,21 @@
 /*   By: mflavio- <mflavio-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/12 19:39:20 by mflavio-          #+#    #+#             */
-/*   Updated: 2023/04/12 19:39:37 by mflavio-         ###   ########.fr       */
+/*   Updated: 2023/04/20 17:51:06 by mflavio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	calculate_move_cost(t_node **head_a, t_node **head_b)
+void	calculate_move_cost(t_node **stack_a, t_node **stack_b)
 {
 	t_node	*tmp;
 	int		size_a;
 	int		size_b;
 
-	size_a = lst_len(*head_a);
-	size_b = lst_len(*head_b);
-	tmp = *head_b;
+	size_a = lst_len(*stack_a);
+	size_b = lst_len(*stack_b);
+	tmp = *stack_b;
 	while (tmp)
 	{
 		tmp->cost_b = tmp->pos;
@@ -33,14 +33,14 @@ void	calculate_move_cost(t_node **head_a, t_node **head_b)
 	}
 }
 
-void	exec_cheapest_move(t_node **head_a, t_node **head_b)
+void	exec_cheapest_move(t_node **stack_a, t_node **stack_b)
 {
 	t_node	*tmp;
 	int		cheapest;
 	int		cost_a;
 	int		cost_b;
 
-	tmp = *head_b;
+	tmp = *stack_b;
 	cheapest = 2147483647;
 	while (tmp)
 	{
@@ -52,5 +52,5 @@ void	exec_cheapest_move(t_node **head_a, t_node **head_b)
 		}
 		tmp = tmp->next;
 	}
-	do_move(head_a, head_b, cost_a, cost_b);
+	do_move(stack_a, stack_b, cost_a, cost_b);
 }
