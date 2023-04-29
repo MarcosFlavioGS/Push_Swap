@@ -28,7 +28,6 @@ int		check_if_already_sorted(t_node *stack);
 int		lst_len(t_node *stack);
 void	get_index(t_node *stack, int len);
 void	sort_3(t_node **stack);
-void	sort_4_5(t_node **stack_a, t_node **stack_b);
 void	sort_bigger(t_node **stack_a, int *len);
 void	clear_stack(t_node **stack);
 void	radix(t_node **stack_a, t_node **stack_b);

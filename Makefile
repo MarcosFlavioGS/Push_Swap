@@ -22,7 +22,6 @@ SRC = 	main.c			\
 		lst_len.c		\
 		get_index.c		\
 		sort_3.c		\
-		sort_4_5.c		\
 		sort_bigger.c	\
 		clear_stack.c	\
 		radix.c			\
