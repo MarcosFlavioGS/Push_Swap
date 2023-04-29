@@ -11,7 +11,7 @@ void	sort_three(t_node **stack)
 	if ((*stack)->x > (*stack)->next->x)
 		swap(&*stack, 0);
 	if ((*stack)->next->x > (*stack)->next->next->x)
-		reverse_rotate(stack, 0);
+		reverse_rotate(&*stack, 0);
 	if ((*stack)->x > (*stack)->next->x)
 		swap(&*stack, 0);
 }
