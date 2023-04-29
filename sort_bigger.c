@@ -18,15 +18,13 @@ static void	sort_2(t_node **stack)
 		rotate(stack, 0);
 }
 
-static void	sort_4_5(t_node **stack_a, t_node **stack_b)
+static void	sort_4_5(t_node **stack_a, t_node **stack_b, int size)
 {
 	int	i;
-	int	size;
 
 	if (check_if_already_sorted(*stack_a))
 		return ;
 	i = 0;
-	size = lst_len(*stack_a);
 	while (i < size)
 	{
 		if ((*stack_a)->index <= 1)
@@ -53,7 +51,7 @@ void	sort_bigger(t_node **stack_a, int len)
 
 	stack_b = NULL;
 	if (len < 6)
-		sort_4_5(&*stack_a, &stack_b);
+		sort_4_5(&*stack_a, &stack_b, len);
 	else
 		radix(&*stack_a, &stack_b);
 	clear_stack(&stack_b);
