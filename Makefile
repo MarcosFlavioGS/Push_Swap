@@ -12,7 +12,7 @@
 
 NAME = push_swap
 
-FLAGS = -Wall -Wextra -Werror
+FLAGS = -Wall -Wextra -Werror -g
 
 SRC = 	main.c			\
 		ft_error.c		\
