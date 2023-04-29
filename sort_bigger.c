@@ -27,18 +27,16 @@ static void	sort_4_5(t_node **stack_a, t_node **stack_b, int size)
 	i = 0;
 	while (i < size)
 	{
-		if ((*stack_a)->index <= 1)
+		if ((*stack_a)->index <= 2)
 			push(&*stack_a, &*stack_b, 1);
 		else
 			rotate(&*stack_a, 0);
 		i++;
 	}
-	ft_printf("test\n");
 	if (size == 4)
 		sort_2(&*stack_a);
 	else
 		sort_3(&*stack_a);
-	ft_printf("Test2\n");
 	if ((*stack_b)->index < (*stack_b)->next->index)
 		swap(&*stack_b, 1);
 	while (*stack_b)
