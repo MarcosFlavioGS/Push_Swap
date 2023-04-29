@@ -18,16 +18,6 @@ static void	sort_2(t_node **stack)
 		rotate(stack, 0);
 }
 
-void	sort_three(t_node **stack)
-{
-	if ((*stack)->x > (*stack)->next->x)
-		swap(&*stack, 0);
-	if ((*stack)->next->x > (*stack)->next->next->x)
-		reverse_rotate(&*stack, 0);
-	if ((*stack)->x > (*stack)->next->x)
-		swap(&*stack, 0);
-}
-
 static void	sort_4_5(t_node **stack_a, t_node **stack_b)
 {
 	int	i;
@@ -49,19 +39,20 @@ static void	sort_4_5(t_node **stack_a, t_node **stack_b)
 	if (size == 4)
 		sort_2(&*stack_a);
 	else
-		sort_three(&*stack_a);
+		sort_3(&*stack_a);
+	ft_printf("Test2\n");
 	if ((*stack_b)->index < (*stack_b)->next->index)
 		swap(&*stack_b, 1);
 	while (*stack_b)
 		push(&*stack_a, &*stack_b, 0);
 }
 
-void	sort_bigger(t_node **stack_a, int *len)
+void	sort_bigger(t_node **stack_a, int len)
 {
 	t_node	*stack_b;
 
 	stack_b = NULL;
-	if (*len < 6)
+	if (len < 6)
 		sort_4_5(&*stack_a, &stack_b);
 	else
 		radix(&*stack_a, &stack_b);
