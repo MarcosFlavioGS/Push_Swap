@@ -12,25 +12,25 @@
 
 NAME = push_swap
 
-FLAGS = -Wall -Wextra -Werror -g
+FLAGS = -Wall -Wextra -Werror
 
-SRC = 	main.c			\
-		ft_error.c		\
-		check_stack.c	\
-		create_list.c	\
-		check_sorted.c	\
-		lst_len.c		\
-		get_index.c		\
-		sort_3.c		\
-		sort_bigger.c	\
-		clear_stack.c	\
-		radix.c			\
-		push.c			\
-		rotate.c		\
-		swap.c			\
-		reverse_rotate.c
+SRC = 	src/main.c			\
+		src/ft_error.c		\
+		src/check_stack.c	\
+		src/create_list.c	\
+		src/check_sorted.c	\
+		src/lst_len.c		\
+		src/get_index.c		\
+		src/sort_3.c		\
+		src/sort_bigger.c	\
+		src/clear_stack.c	\
+		src/radix.c			\
+		src/push.c			\
+		src/rotate.c		\
+		src/swap.c			\
+		src/reverse_rotate.c
 
-OBJ = ${SRC:.c=.o}
+OBJ = ${SRC:src/%.c=obj/%.o}
 
 LIBFT = libft/libft.a
 
@@ -42,11 +42,12 @@ ${LIBFT}:
 ${NAME}: ${OBJ} ${LIBFT}
 	gcc ${FLAGS} -o $@ $^
 
-%.o: %.c
+obj/%.o: src/%.c
+	mkdir -p obj
 	gcc ${FLAGS} -c $< -o $@
 
 clean:
-	rm -rf ${OBJ}
+	rm -rf obj
 	$(MAKE) -C libft/ clean
 
 fclean: clean
