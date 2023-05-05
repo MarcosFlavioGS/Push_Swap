@@ -25,7 +25,10 @@ int	main(int argc, char **argv)
 		ft_error(error);
 	stack_a = create_linked_list(argv);
 	if (check_if_already_sorted(stack_a))
+	{
+		clear_stack(&stack_a);
 		return (0);
+	}
 	list_len = lst_len(stack_a);
 	if (list_len == 2)
 		ft_printf("sa\n");
